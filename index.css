@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap");
+
+body {
+  background-color: #ac7a7a;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+#landing {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(/asesets/landing.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: "Yuji Mai", serif;
+}
+/* #dac2c2 (218,194,194)
+#ac7a7a (172,122,122)
+#ad92b7 (173,146,183) */
+
+#headings {
+  color: #dac2c2;
+  font-family: "Yuji Mai", serif;
+}
+h1.class-head {
+  color: #ad92b7;
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+}
+.col-md-6 {
+  padding-left: 10rem;
+}
