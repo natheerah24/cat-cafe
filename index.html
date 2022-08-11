@@ -15,100 +15,129 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="nav">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#landing"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#service">Service</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#menu">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#booking">Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Us</a>
-        </li>
-      </ul>
-    </div>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <input type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#landing">Home</a></li>
+          <li><a href="#service">About</a></li>
+          <li><a href="#staff">Staff</a></li>
+          <li><a href="#menu">Products</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/login.html">Sign in</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+        <h1 class="logo"><i class="fa-solid fa-paw"></i></h1>
+      </div>
+    </nav>
     <section id="landing">
       <h1 id="headings">aCquAinTance</h1>
     </section>
     <section id="service">
       <h1 id="headings">Service</h1>
       <p>
-        Our business offer people a place to relax with friends and
-        felines, while they also enjoy a beverage or snack.
+        Our business offer people a place to relax with friends and felines,
+        while they also enjoy a beverage or snack.
       </p>
-      
+    </section>
+    <section id="staff">
+      <div id="content"></div>
     </section>
     <section id="menu">
-      <h1 id="headings">Menu</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <h1 class="class-head">Hot Drinks</h1>
-          <ul>
-            <li>Espresso</li>
-            <li>Double Espresso</li>
-            <li>Americano</li>
-            <li>Cuppuccino</li>
-            <li>Latte</li>
-            <li>Frappe</li>
-            <li>Mocha</li>
-            <li>Hot Chocolate</li>
-            <li>Tea</li>
-            <li>Camomile Tea</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h1 class="class-head">Cold Drinks</h1>
-          <ul>
-            <li>Fanta</li>
-            <li>Coke Zero</li>
-            <li>Ice Tea</li>
-            <li>Sprite</li>
-            <li>Coke</li>
-            <li>Milkshakes</li>
-            <li>Orange Juice</li>
-            <li>Apple Juice</li>
-            <li>Mango Juice</li>
-            <li>Water</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h1 class="class-head">Snacks</h1>
-          <ul>
-            <li>Fries</li>
-            <li>Chicken Nuggets</li>
-            <li>Ham Sandwich</li>
-            <li>Garlic Bread</li>
-            <li>Sausage Rolls</li>
-            <li>Croissants</li>
-            <li>Pies</li>
-            <li>Danishes</li>
-            <li>Buffalo Wings-6/12 piece</li>
-            <li>Vegan Salad</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h1 class="class-head">Desert</h1>
-          <ul>
-            <li>Chocolate Cake</li>
-            <li>Carrot Cake</li>
-            <li>Cheese Cake</li>
-            <li>Cup Cakes</li>
-            <li>Apple Pie</li>
-            <li>Donuts</li>
-            <li>Cookies</li>
-            <li>Brownies</li>
-            <li>Blueberry Muffin</li>
-            <li>Ice Cream Cones</li>
-          </ul>
+      <div class="food-menu">
+        <div class="food-menu-layer">
+          <div class="menu">
+            <div class="group">
+              <h2>Hot Drinks</h2>
+              <p>
+                <span>Espresso</span>
+                <span>$3</span>
+              </p>
+              <p>
+                <span>Double Espresso</span>
+                <span>$3.50</span>
+              </p>
+              <p>
+                <span>Americano</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Cuppuccino</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Latte</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Frappe</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Mocha</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Hot Chocolate</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Tea</span>
+                <span>$4.50</span>
+              </p>
+              <p>
+                <span>Camomile Tea</span>
+                <span>$3</span>
+              </p>
+            </div>
+            <div class="group">
+              <h2>Cold Drinks</h2>
+              <p><span>Fanta</span> <span>$3</span></p>
+              <p><span>Coke</span> <span>$5</span></p>
+              <p><span>Ice Tea</span> <span>$3</span></p>
+              <p><span>Coke Lite</span> <span>$3</span></p>
+              <p><span>Sprite</span> <span>$3</span></p>
+              <p><span>Milkshakes</span> <span>$3</span></p>
+              <p><span>Orange Juice</span> <span>$3</span></p>
+              <p><span>Apple Juice</span> <span>$3</span></p>
+              <p><span>Mango Juice</span> <span>$3</span></p>
+              <p><span>Water</span> <span>$3</span></p>
+            </div>
+            <div class="group">
+              <h2>Snacks</h2>
+              <p><span>Fries</span> <span>$1</span></p>
+              <p><span>Chicken Nuggets</span> <span>$1</span></p>
+              <p><span>Ham Sandwich</span> <span>$2</span></p>
+              <p><span>Garlic Bread</span> <span>$1</span></p>
+              <p><span>Sausage Rolls</span> <span>$1</span></p>
+              <p><span>Croissants</span> <span>$1</span></p>
+              <p><span>Pies</span> <span>$1</span></p>
+              <p><span>Danishes</span> <span>$1</span></p>
+              <p><span>Buffalo Wings-6/12 piece</span> <span>$1</span></p>
+              <p><span>Vegan Salad</span> <span>$1</span></p>
+            </div>
+            <div class="group">
+              <h2>Sweet Treats</h2>
+              <p><span>Chocolate Cake</span> <span>$2</span></p>
+              <p><span>Carrot Cake</span> <span>$4</span></p>
+              <p><span>Cheese Cake</span> <span>$4</span></p>
+              <p><span>Cup Cakes</span> <span>$4</span></p>
+              <p><span>Apple Pie</span> <span>$4</span></p>
+              <p><span>Donuts</span> <span>$4</span></p>
+              <p><span>Cookies</span> <span>$4</span></p>
+              <p><span>Brownies</span> <span>$4</span></p>
+              <p><span>Blueberry Muffin</span> <span>$4</span></p>
+              <p><span>Ice Cream Swirls</span> <span>$4</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -117,6 +146,10 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f00b55dab7.js"
       crossorigin="anonymous"
     ></script>
     <script src="./index.js"></script>
