@@ -85,7 +85,7 @@ async function sendUserData() {
       localStorage.setItem("token", JSON.stringify(data.token));
       VerifyUser();
     });
-    window.location.reload()
+alert(`welcome`+localStorage.UserName)
 }
 
 let userLogin = () => {
