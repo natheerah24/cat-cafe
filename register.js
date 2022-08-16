@@ -59,7 +59,7 @@ async function registerNewUser() {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      alert(data)
     });
 }
 async function sendUserData() {
