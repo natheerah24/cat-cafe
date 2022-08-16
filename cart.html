@@ -26,7 +26,7 @@
               <div class="col align-self-center text-right text-muted"></div>
             </div>
           </div>
-          <div id="basket"></div>
+          <div id="catCart"></div>
           <div class="back-to-shop">
             <a href="./index.html">&leftarrow;</a
             ><span class="text-muted">Back to shop</span>
@@ -56,7 +56,7 @@
             <div class="col">TOTAL PRICE</div>
             <div class="col text-right"></div>
           </div>
-          <button class="btn">CHECKOUT</button>
+          <button class="btn" onclick="checkOut()">CHECKOUT</button>
         </div>
       </div>
     </div>
@@ -66,5 +66,22 @@
       crossorigin="anonymous"
     ></script>
     <script src="/cart.js"></script>
+    <script>
+
+let orders= JSON.parse(localStorage.cart)
+document.querySelector('#catCart').innerHTML=``
+console.log(orders)
+orders.forEach((mlem)=>{
+
+document.querySelector('#catCart').innerHTML+=`
+<div class="Item" >
+<h1>${mlem.name}</h1>
+<img src="${mlem.image}" alt="${mlem.image}">
+<input type="range" min="1" max="100" value="0" class="slider" onchange="getTime(this.id)" id="mayonnaiseIsADrink${mlem.staffID}">
+</div>
+`
+}
+)
+    </script>
   </body>
 </html>

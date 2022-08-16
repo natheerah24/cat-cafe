@@ -1,4 +1,5 @@
-rsconsole.log = 0;
+let cart =[]
+
 async function showItem(id) {
   const response = await fetch(
     "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/staff/" +
@@ -12,29 +13,24 @@ async function showItem(id) {
   );
   let data = await response.json();
   let staff = data;
-  staff.forEach((person) => {
-    document.querySelector("#basket").innerHTML += `
-<div class="Item" >
-<h1>${person.name}</h1>
-<img src="${person.image}" alt="${person.image}">
-<input type="range" min="1" max="100" value="50" class="slider" onchange="getTime(this.id)" id="mayonnaiseIsADrink${person.staffID}">
+  cart.push(data[0])
+  localStorage.setItem("cart", JSON.stringify(cart));
 
-</div>
-`;
+  staff.forEach((person) => {
+//     document.querySelector("#basket").innerHTML += `
+// <div class="Item" >
+// <h1>${person.name}</h1>
+// <img src="${person.image}" alt="${person.image}">
+// <input type="range" min="1" max="100" value="1" class="slider" onchange="getTime(this.id)" id="mayonnaiseIsADrink${person.staffID}">
+// </div>
+// `;
+alert(`booked ${person.name}` )
+
   });
 }
-let cart =localStorage.cart
-cart.forEach((order),
-document.querySelector('#basket').innerHTML=``,
-document.querySelector('#basket').innerHTML+=`
- <div class="Item" >
-<h1>${order.name}</h1>
-<img src="${order.image}" alt="${order.image}">
-<input type="range" min="1" max="100" value="50" class="slider" onchange="getTime(this.id)" id="mayonnaiseIsADrink${order.staffID}">
-</div>
-`
 
-)
+
+
 // Not displaying
 let getTime = (id) => {
   let personell = (id) => {
@@ -61,6 +57,7 @@ let checkOut = () => {
         "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/orders",
         {
           method: "POST",
+
           body: JSON.stringify({
             user_id: order.user_id,
             staff_ID: order.staff,
@@ -76,9 +73,9 @@ let checkOut = () => {
       if (data.status === "error") {
         alert(data.error);
       }
+      alert(`order No`+data.msg);
     }
     ufn();
   });
   localStorage.cart = null;
-  alert("ordered");
 };
