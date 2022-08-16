@@ -68,11 +68,11 @@ let checkOut = () => {
           },
         }
       );
-      let data = await response.json();
+      let data = await response;
       if (data.status === "error") {
         alert(data.error);
       }
-      alert(`order No`+data.msg);
+      alert("ordered");
     }
     ufn();
   });
