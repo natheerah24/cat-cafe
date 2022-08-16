@@ -1,3 +1,6 @@
+// const fetch = require("node-fetch");
+// import fetch from "node-fetch";
+
 // fetch(
 //   "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/staff",
 //   {
@@ -18,9 +21,9 @@
 //     `;
 //     });
 //   });
-resetMenu = () => {
+const newLocal = (resetMenu = () => {
   document.querySelector("#navMenu").classList.remove("active");
-};
+});
 let displayCat = () => {
   return Math.ceil(Math.random() * 32);
 };
@@ -40,14 +43,16 @@ fetch(
     posterCat = data;
     posterCat.forEach((cat) => {
       document.querySelector("#content").innerHTML += `
-       <div class="Item"  id="${cat.staffID}" >
-       <h1 id="names">${cat.name}</h1>
-       <img src="${cat.image}" alt="${cat.image}">
-       <button onclick="revealContent()" id='viewButton' class="view-more">view more</button>
-       </div>
-       `;
+    <div class="Item"  id="${cat.staffID}" >
+    <h1>${cat.name}</h1>
+    <img src="${cat.image}" alt="${cat.image}">
+    <button onclick="revealContent()" id='viewButton'>view more</button>
+    </div>
+    `;
     });
   });
+
+
 fetch(
   "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/staff",
   {
@@ -64,7 +69,7 @@ fetch(
        <h1 id="names">${cat.name}</h1>
        <img src="${cat.image}" alt="${cat.image}">
        <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" >
     <button class="book"><i class="fa-solid fa-cart-shopping"></i></button>
     </div>
     <div class="col-md-6">

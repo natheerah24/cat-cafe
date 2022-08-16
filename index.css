@@ -366,27 +366,37 @@ ul {
 #ad92b7 (173,146,183) */
 .Item {
   background-color: #dac2c2;
-  max-width: 22vw;
+  width: 22vw;
+  /* height: 22vh; */
   margin: 2em;
+  aspect-ratio: 1;
   border: solid #ad92b7;
   padding: var(--ss);
 }
 .Item > img {
-  width: 77%;
+  width: 80%;
   border-radius: 50%;
   aspect-ratio: 1;
   margin-left: 2rem;
+  height: 35vh;
+  padding-bottom: 3%;
 }
+
 img,
 svg {
   vertical-align: middle;
-  width: 40rem;
-  border-radius: 3%;
+  width: 45rem;
+  border-radius: 1%;
+  height: 29rem;
 }
+
 #about {
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 1rem;
+  padding: 2rem;
+}
+#about-card {
   padding-left: 2rem;
 }
 .book {
@@ -399,7 +409,7 @@ svg {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  width: 7rem;
+  width: 8rem;
 }
 .view-more {
   background-color: #ac7a7a;
@@ -504,8 +514,10 @@ svg {
   justify-content: center;
   transform-origin: top center;
   transform: scale(0);
+  display: none;
 }
 #allCats.active {
+  display: flex;
   transform: scale(1);
   transition-duration: 1000ms;
 }
@@ -520,16 +532,6 @@ svg {
     border-radius: 50%;
     aspect-ratio: 1;
     margin-left: 2rem;
-  }
-  #mapDiv {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 29rem;
-  }
-  element.style {
-    overflow: hidden;
-    /* background-color: grey; */
   }
 }
 
@@ -549,5 +551,12 @@ div#video {
   bottom: 0;
   z-index: 10;
   overflow-y: scroll;
-  display: none;
+  /* display: none; */
+}
+#viewButton {
+  font-family: "Yuji Mai", serif;
+}
+footer {
+  display: flex;
+  justify-content: center;
 }

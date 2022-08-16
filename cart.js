@@ -1,5 +1,4 @@
-let cart = [];
-console.log = 0; 
+rsconsole.log = 0;
 async function showItem(id) {
   const response = await fetch(
     "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/staff/" +
@@ -24,7 +23,19 @@ async function showItem(id) {
 `;
   });
 }
+let cart =localStorage.cart
+cart.forEach((order),
+document.querySelector('#basket').innerHTML=``,
+document.querySelector('#basket').innerHTML+=`
+ <div class="Item" >
+<h1>${order.name}</h1>
+<img src="${order.image}" alt="${order.image}">
+<input type="range" min="1" max="100" value="50" class="slider" onchange="getTime(this.id)" id="mayonnaiseIsADrink${order.staffID}">
+</div>
+`
 
+)
+// Not displaying
 let getTime = (id) => {
   let personell = (id) => {
     let staff_ID = id.split("k");
@@ -39,6 +50,8 @@ let getTime = (id) => {
   cart.push(booking);
   localStorage.setItem("cart", JSON.stringify(cart));
 };
+
+// Checkout
 let checkOut = () => {
   let selection = JSON.parse(localStorage.cart);
 
