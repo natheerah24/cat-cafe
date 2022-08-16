@@ -85,6 +85,7 @@ async function sendUserData() {
       localStorage.setItem("token", JSON.stringify(data.token));
       VerifyUser();
     });
+    window.location.reload()
 }
 
 let userLogin = () => {
