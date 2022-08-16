@@ -57,7 +57,7 @@ let checkOut = () => {
         "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/orders",
         {
           method: "POST",
-
+          mode:"no-cors",
           body: JSON.stringify({
             user_id: order.user_id,
             staff_ID: order.staff,
