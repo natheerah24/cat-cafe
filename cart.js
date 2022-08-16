@@ -50,7 +50,6 @@ let getTime = (id) => {
 // Checkout
 let checkOut = () => {
   let selection = JSON.parse(localStorage.cart);
-
   selection.forEach((order) => {
     async function ufn() {
       const response = await fetch(
@@ -59,8 +58,8 @@ let checkOut = () => {
           method: "POST",
           mode:"no-cors",
           body: JSON.stringify({
-            user_id: order.user_id,
             staff_ID: order.staff,
+            user_id: order.user_id,
             amount: order.duration,
             status: order.status,
           }),
