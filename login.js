@@ -69,6 +69,7 @@ async function sendUserData() {
     "https://incredible-meerkat-9ef8b4.netlify.app/.netlify/functions/api/users/login",
     {
       method: "POST",
+    //   mode:"no-cors",
       headers: {
         "Content-Type": "application/json",
       },
